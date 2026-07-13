@@ -84,56 +84,28 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
 .about-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
 .about-pills span{background:var(--cream);padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600;color:var(--burg-70)}
 
-/* ═══ CASE ═══ */
-.case-tag{display:inline-flex;align-items:center;gap:8px;background:var(--cream);padding:10px 22px;border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--burg);margin-bottom:20px}
-.case-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
-.case-header .sec-sub{max-width:100%}
+/* ═══ CASES GALLERY ═══ */
+.cases-gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.case-card{background:var(--white);border:1px solid rgba(67,48,46,.05);border-radius:var(--r);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.case-card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(67,48,46,.12)}
+.case-card-img{overflow:hidden;aspect-ratio:16/10;position:relative}
+.case-card-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
+.case-card:hover .case-card-img img{transform:scale(1.03)}
+.case-card-badge{position:absolute;top:16px;left:16px;background:var(--cream);padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--burg)}
+.case-card-body{padding:32px 28px 28px;flex:1;display:flex;flex-direction:column}
+.case-card-body h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;margin:0 0 12px;line-height:1.1}
+.case-card-body p{font-size:15px;color:var(--burg-50);line-height:1.6;margin:0 0 20px;flex:1}
+.case-card-stats{display:flex;gap:20px;padding-top:16px;border-top:1px solid rgba(67,48,46,.06);margin-bottom:20px}
+.case-card-stat{text-align:center}
+.case-card-stat .n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;line-height:1}
+.case-card-stat .l{font-size:11px;color:var(--burg-50);font-weight:500;margin-top:2px}
+.case-card-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--burg);transition:gap .2s}
+.case-card:hover .case-card-link{gap:12px}
+.case-card-link .arr{transition:transform .2s}
+.case-card:hover .case-card-link .arr{transform:translateX(3px)}
 
-.showcase{display:flex;flex-direction:column;gap:80px;margin-bottom:72px}
-.show-item{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
-.show-item.reverse{grid-template-columns:.8fr 1.2fr}
-.show-item.reverse .show-img{order:2}
-.show-item.reverse .show-text{order:1}
-.show-img{border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(67,48,46,.10),0 0 0 1px rgba(67,48,46,.04);transition:transform .3s}
-.show-img:hover{transform:translateY(-4px)}
-.show-img img{width:100%;display:block}
-.show-text h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;margin:0 0 16px;line-height:1.1}
-.show-text p{font-size:16px;color:var(--burg-50);line-height:1.65;margin:0 0 20px}
-.show-tags{display:flex;gap:8px;flex-wrap:wrap}
-.show-tags span{background:var(--cream);padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600;color:var(--burg-70)}
-.show-full{border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(67,48,46,.10),0 0 0 1px rgba(67,48,46,.04);transition:transform .3s}
-.show-full:hover{transform:translateY(-4px)}
-.show-full img{width:100%;display:block}
-.show-full-caption{display:flex;align-items:center;justify-content:space-between;margin-top:20px;gap:20px}
-.show-full-caption h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin:0}
-.show-full-caption p{font-size:15px;color:var(--burg-50);margin:0;max-width:500px;text-align:right}
-
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
-.stat{background:var(--white);border:1px solid rgba(67,48,46,.05);border-radius:var(--rs);padding:28px 24px;text-align:center;transition:transform .2s,box-shadow .2s}
-.stat:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(67,48,46,.07)}
-.stat-n{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;line-height:1;margin-bottom:6px}
-.stat-l{font-size:13.5px;color:var(--burg-50);font-weight:500;line-height:1.3}
-
-.case-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.c-card{border-radius:var(--r);padding:36px 32px;transition:transform .2s}
-.c-card:hover{transform:translateY(-2px)}
-.c-card.light{background:var(--white);border:1px solid rgba(67,48,46,.05)}
-.c-card.dark{background:var(--burg);color:var(--cream-light)}
-.c-card h4{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;margin:0 0 18px;line-height:1.15}
-.c-card p{font-size:15.5px;line-height:1.65;color:var(--burg-50);margin:0}
-.c-card.dark p{color:rgba(255,241,181,.7)}
-.c-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.c-card li{font-size:15px;line-height:1.55;display:flex;gap:10px;align-items:flex-start}
-.c-card li::before{content:"→";flex-shrink:0;font-weight:600;margin-top:1px}
-.c-card.light li{color:var(--burg-70)}.c-card.light li::before{color:var(--burg-30)}
-.c-card.dark li{color:rgba(255,241,181,.85)}.c-card.dark li::before{color:var(--cream)}
-
-.live-banner{display:flex;align-items:center;justify-content:space-between;background:var(--burg);border-radius:var(--r);padding:32px 40px;margin-top:48px;color:var(--cream-light);transition:transform .2s,box-shadow .2s;gap:20px}
-.live-banner:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(67,48,46,.22)}
-.live-banner-text h4{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;margin:0 0 4px;color:var(--cream)}
-.live-banner-text p{font-size:14px;color:rgba(255,241,181,.6);margin:0}
-.live-banner-btn{background:var(--cream);color:var(--burg);padding:14px 32px;border-radius:999px;font-size:14px;font-weight:600;flex-shrink:0;transition:transform .15s}
-.live-banner-btn:hover{transform:translateY(-1px)}
+.case-card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.case-card-tags span{background:var(--cream);padding:5px 12px;border-radius:999px;font-size:11px;font-weight:600;color:var(--burg-70)}
 
 /* PROCESS */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
@@ -214,19 +186,16 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
   .wrap{padding:0 20px}
   .nav{display:none}
   .hero{padding:56px 0 48px}
-  .hero-grid,.about-grid,.show-item,.show-item.reverse,.case-header{grid-template-columns:1fr;gap:36px}
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:36px}
   .hero-photo{max-width:400px}
-  .show-item.reverse .show-img{order:0}.show-item.reverse .show-text{order:0}
-  .stats{grid-template-columns:1fr 1fr}
-  .case-cards,.pricing-grid{grid-template-columns:1fr}
+  .cases-gallery{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
   .services-grid,.steps{grid-template-columns:1fr 1fr}
   .cta-box{padding:56px 24px}
   .footer-inner{flex-direction:column;gap:16px;text-align:center}
-  .show-full-caption{flex-direction:column;text-align:left}.show-full-caption p{text-align:left}
-  .live-banner{flex-direction:column;text-align:center}
   .about-collage{max-width:400px}
 }
-@media(max-width:540px){.services-grid,.steps{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.services-grid,.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -237,7 +206,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
     <a href="#" class="logo">eva.</a>
     <nav class="nav">
       <a href="#about">Обо мне</a>
-      <a href="#case">Кейс</a>
+      <a href="#cases">Кейсы</a>
       <a href="#services">Услуги</a>
       <a href="#pricing">Цены</a>
     </nav>
@@ -255,7 +224,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
         <p class="hero-lead">Не просто красивая страница — а&nbsp;рабочий инструмент с&nbsp;календарём, оплатой, формами и&nbsp;расписанием. Который вы сами сможете вести и&nbsp;обновлять.</p>
         <div class="hero-btns">
           <a href="#contact" class="btn-dark">Обсудить проект <span class="arr">→</span></a>
-          <a href="#case" class="btn-line">Смотреть кейс</a>
+          <a href="#cases" class="btn-line">Смотреть кейсы</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -286,7 +255,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
   <div class="wrap">
     <div class="fi">
       <span class="sec-label">обо мне</span>
-      <h2 class="sec-title">Я — Ева. Делаю сайты,<br>которые хочется рассматривтаь</em></h2>
+      <h2 class="sec-title">Я — Ева. Делаю сайты,<br>которые хочется <em>рассматривать</em></h2>
     </div>
     <div class="about-grid">
       <div class="about-collage fi fi-d1">
@@ -296,7 +265,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
       </div>
       <div class="about-text fi fi-d2">
         <p>У вас 3 секунды, когда человек заходит на сайт. За это время он решает — остаться или&nbsp;уйти. Я&nbsp;делаю так, чтобы <strong>оставался</strong>.</p>
-        <p>Нахожу визуальный язык для вашего проекта: цвета, ритм, типографику</strong>.</p>
+        <p>Нахожу визуальный язык для вашего проекта: цвета, ритм, типографику.</p>
         <p>Но главное — сайт не просто красиво выглядит. Он&nbsp;работает: принимает заявки, считает места, подключает оплату. Вы&nbsp;обновляете расписание сами, а&nbsp;сайт делает&nbsp;остальное.</p>
         <div class="about-pills">
           <span>Веб-дизайн</span><span>Вёрстка</span><span>Адаптив</span><span>Figma</span><span>Vercel</span>
@@ -308,118 +277,60 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
 
 <hr class="divider wrap">
 
-<!-- ═══════ CASE ═══════ -->
-<section id="case" class="sec">
+<!-- ═══════ CASES ═══════ -->
+<section id="cases" class="sec">
   <div class="wrap">
-    <div class="fi"><div class="case-tag">☀ Кейс</div></div>
-    <div class="case-header fi">
-      <div><h2 class="sec-title">Клуб "Рассвет" — от идеи<br>до <em>сайта с системой и функционалом</em><br>за 7 дней</h2></div>
-      <p class="sec-sub">Женский клуб активностей в&nbsp;Москве. Задача — сделать сайт, который не просто расскажет о&nbsp;клубе, а&nbsp;сам начнёт принимать оплату и&nbsp;вести запись.</p>
+    <div class="fi">
+      <span class="sec-label">кейсы</span>
+      <h2 class="sec-title">Проекты, которые<br><em>уже работают</em></h2>
+      <p class="sec-sub">Каждый сайт — это не просто дизайн, а готовый инструмент. С расписанием, оплатой, формами — всем, что нужно, чтобы проект работал без&nbsp;ручного&nbsp;управления.</p>
     </div>
 
-    <div class="stats fi">
-      <div class="stat"><div class="stat-n">7</div><div class="stat-l">дней на создание</div></div>
-      <div class="stat"><div class="stat-n">3</div><div class="stat-l">страницы с функционалом</div></div>
-      <div class="stat"><div class="stat-n">100%</div><div class="stat-l">адаптив под мобильные</div></div>
-      <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">сайт работает за вас</div></div>
+    <div class="cases-gallery fi fi-d1">
+
+      <!-- Кейс 1: Клуб Рассвет -->
+      <a href="case.html" class="case-card">
+        <div class="case-card-img">
+          <img src="case-hero.png" alt="Клуб Рассвет — главная страница"/>
+          <span class="case-card-badge">Клиентский проект</span>
+        </div>
+        <div class="case-card-body">
+          <h3>Клуб «Рассвет»</h3>
+          <p>Женский клуб активностей в Москве. Сайт с онлайн-оплатой, интерактивным календарём и расписанием, которое обновляется из&nbsp;таблицы.</p>
+          <div class="case-card-tags">
+            <span>Оплата</span><span>Календарь</span><span>Google Sheets</span><span>3 страницы</span>
+          </div>
+          <div class="case-card-stats">
+            <div class="case-card-stat"><div class="n">7</div><div class="l">дней</div></div>
+            <div class="case-card-stat"><div class="n">3</div><div class="l">страницы</div></div>
+            <div class="case-card-stat"><div class="n">24/7</div><div class="l">работает сам</div></div>
+          </div>
+          <span class="case-card-link">Смотреть кейс <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <!-- Кейс 2: Латинатерапия -->
+      <a href="case-dancelatina.html" class="case-card">
+        <div class="case-card-img">
+          <img src="case-hero.jpg" alt="Латинатерапия — главная страница"/>
+          <span class="case-card-badge">Pet-проект</span>
+        </div>
+        <div class="case-card-body">
+          <h3>Латинатерапия</h3>
+          <p>Мой собственный проект — сайт для занятий латиноамериканскими танцами. Расписание, форматы, путь ученика — всё на одной странице.</p>
+          <div class="case-card-tags">
+            <span>Личный бренд</span><span>Расписание</span><span>Адаптив</span><span>Анимации</span>
+          </div>
+          <div class="case-card-stats">
+            <div class="case-card-stat"><div class="n">8</div><div class="l">секций</div></div>
+            <div class="case-card-stat"><div class="n">100%</div><div class="l">адаптив</div></div>
+            <div class="case-card-stat"><div class="n">1</div><div class="l">страница</div></div>
+          </div>
+          <span class="case-card-link">Смотреть кейс <span class="arr">→</span></span>
+        </div>
+      </a>
+
     </div>
-
-    <div class="showcase">
-
-      <!-- 1. Hero -->
-      <div class="show-item fi">
-        <div class="show-img"><img src="case-hero.png" alt="Hero-секция"/></div>
-        <div class="show-text">
-          <h3>Первый экран решает всё</h3>
-          <p>3 секунды, чтобы человек остался. Тёплые тона, фото, два понятных действия: «выбрать тариф» или «узнать больше».</p>
-          <div class="show-tags"><span>Hero</span><span>CTA-кнопки</span><span>Sticky-хедер</span></div>
-        </div>
-      </div>
-
-      <!-- 2. About -->
-      <div class="show-item reverse fi">
-        <div class="show-img"><img src="case-about.png" alt="О клубе"/></div>
-        <div class="show-text">
-          <h3>Доверие через понятные смыслы</h3>
-          <p>Посетитель чувствует клуб до того, как в него вступит.</p>
-          <div class="show-tags"><span>Фото-коллаж</span><span>Сторителлинг</span></div>
-        </div>
-      </div>
-
-      <!-- 3. Schedule -->
-      <div class="fi">
-        <div class="show-full"><img src="case-schedule.png" alt="Расписание на неделю"/></div>
-        <div class="show-full-caption">
-          <h3>Всё понятно за 3 секунды</h3>
-          <p>7 дней, цветовые метки, название и время. Никаких PDF в чате — всё на сайте, всегда актуальное и удобно в использовании.</p>
-        </div>
-      </div>
-
-      <!-- 4. Calendar header -->
-      <div class="show-item fi">
-        <div class="show-img"><img src="case-calendar-header.png" alt="Календарь"/></div>
-        <div class="show-text">
-          <h3>Календарь, который вы ведёте сами</h3>
-          <p>Отдельная страница с полным расписанием на месяц. Фильтры по активностям, навигация по месяцам. Данные подтягиваются из таблицы — обновили там, обновилось на сайте.</p>
-          <div class="show-tags"><span>Отдельная страница</span><span>Фильтры</span><span>Google Sheets</span></div>
-        </div>
-      </div>
-
-      <!-- 5. Calendar grid -->
-      <div class="fi">
-        <div class="show-full"><img src="case-calendar-full.png" alt="Сетка календаря"/></div>
-        <div class="show-full-caption">
-          <h3>Работает как приложение</h3>
-          <p>Цветовое кодирование, бейдж «сегодня», стрелки навигации. Клиенту не нужно писать «а что у вас в субботу?»</p>
-        </div>
-      </div>
-
-      <!-- 6. Gallery -->
-      <div class="show-item reverse fi">
-        <div class="show-img"><img src="case-gallery.png" alt="Галерея"/></div>
-        <div class="show-text">
-          <h3>Контент, которым делятся</h3>
-          <p>Фото-галерея из жизни клуба. Плюс бонус-чеклист «45+ вещей, которые веселее делать вместе» — отдельная страница, которую сохраняют в&nbsp;сторис.</p>
-          <div class="show-tags"><span>Фото-сетка</span><span>CTA-баннер</span><span>Доп. страница</span></div>
-        </div>
-      </div>
-
-      <!-- 7. Pricing -->
-      <div class="show-item fi">
-        <div class="show-img"><img src="case-pricing.png" alt="Тарифы"/></div>
-        <div class="show-text">
-          <h3>Оплата без «напишите в&nbsp;директ»</h3>
-          <p>Два тарифа, форма заявки, автоматический расчёт суммы. Оплата через Prodamus. Счётчик мест обновляется в&nbsp;реальном времени из&nbsp;Google&nbsp;Sheets — и&nbsp;создаёт ощущение «надо успеть».</p>
-          <div class="show-tags"><span>Тарифы</span><span>Модальная форма</span><span>Prodamus</span><span>Счётчик мест</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="case-cards fi">
-      <div class="c-card light">
-        <h4>Было</h4>
-        <p> Идея создать клуб в Telegram-чате. Запись через личные сообщения, расписание в&nbsp;заметках, оплата переводом и не понятна структура самопрезентации. Сложно&nbsp;масштабировать.</p>
-      </div>
-      <div class="c-card dark">
-        <h4>Стало</h4>
-        <ul>
-          <li>3 страницы с полным функционалом</li>
-          <li>Интерактивный календарь с фильтрами</li>
-          <li>Онлайн-оплата в два клика</li>
-          <li>Счётчик мест в реальном времени</li>
-          <li>Расписание обновляется из таблицы</li>
-          <li>Сайт работает сам — 24/7</li>
-        </ul>
-      </div>
-    </div>
-
-    <a href="https://rassvet-self.vercel.app" target="_blank" rel="noopener" class="live-banner fi">
-      <div class="live-banner-text">
-        <h4>Посмотреть живой сайт</h4>
-        <p>rassvet-self.vercel.app</p>
-      </div>
-      <span class="live-banner-btn">Открыть →</span>
-    </a>
   </div>
 </section>
 
@@ -514,7 +425,7 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;o
     <div class="footer-inner">
       <a href="#" class="logo">eva.</a>
       <div class="footer-links">
-        <a href="#about">Обо мне</a><a href="#case">Кейс</a><a href="#services">Услуги</a><a href="#pricing">Цены</a>
+        <a href="#about">Обо мне</a><a href="#cases">Кейсы</a><a href="#services">Услуги</a><a href="#pricing">Цены</a>
         <a href="https://t.me/evavasilyyevna" target="_blank" rel="noopener">Telegram</a>
       </div>
     </div>
