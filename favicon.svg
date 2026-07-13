@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="100%" stop-color="#F5C842"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD63A"/>
+      <stop offset="100%" stop-color="#E8AD0C"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE880"/>
+      <stop offset="100%" stop-color="#F5C842"/>
+    </linearGradient>
+  </defs>
+  <!-- Back panel -->
+  <rect x="6" y="16" width="52" height="38" rx="4" fill="url(#body)"/>
+  <!-- Tab -->
+  <path d="M6 16 C6 13.2 8.2 11 11 11 L24 11 C25.5 11 26.8 11.7 27.6 12.8 L30 16 Z" fill="url(#tab)"/>
+  <!-- Front panel -->
+  <rect x="4" y="24" width="56" height="32" rx="4" fill="url(#front)"/>
+  <!-- Shine line -->
+  <rect x="10" y="28" width="28" height="2" rx="1" fill="rgba(255,255,255,0.45)"/>
+</svg>
